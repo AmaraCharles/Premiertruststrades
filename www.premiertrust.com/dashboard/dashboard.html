@@ -7,7 +7,7 @@
 
   <title> premiertrust - Dashboard</title>
   <meta name="title" content="premiertrust - Dashboard">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <meta name="description" content="Follow Lead Traders and copy their trading activity with Expert CopyTrading">
   <meta name="keywords" content="investment">
   <link rel="shortcut icon" href="http://premiertrust.com/assets/images/logoIcon/favicon.png" type="image/x-icon">
@@ -5596,10 +5596,10 @@
           url: `  https://premiertrust-vercel-29a5cf9a4c78.herokuapp.com/users/${userFromLS.email}`,
           dataType: "json",
           timeout: 30000,
-          success: async function (data) {
+          success:  function (data) {
             // Object.assign(currentUser, data.data)
             console.log("fetched")
-            await localStorage.setItem("user",JSON.stringify(data.data))
+             localStorage.setItem("user",JSON.stringify(data.data))
           },
           error: function () {
             alert(error)
@@ -5635,7 +5635,7 @@
         var btcprice=Number(userInfo.balance)/Number(60000)
         var balance3 = userInfo.balance
         var profit2 = userInfo.profit
-        $("#username").html(userInfo.firstName + " " + userInfo.lastName);
+        // $("#username").html(userInfo.firstName + " " + userInfo.lastName);
        
         // $("#email").html(userInfo.email);
         $("#accountBalance").html(userInfo.balance);
@@ -5762,7 +5762,7 @@ emptyBalance.style="display:none";
 
 
 
-    <script src="./dashboard_files/jquery.min(1).js.download"></script>
+    
     <script src="./dashboard_files/svg4everybody.min.js.download"></script>
     <script src="./dashboard_files/owl.carousel.min.js.download"></script>
     <script src="./dashboard_files/apexcharts.min(2).js.download"></script>
