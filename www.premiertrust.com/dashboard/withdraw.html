@@ -3262,7 +3262,7 @@ ul {
                     
                     function (data) {
                                 console.log(data)
-                                swal.fire({
+                                swal({
                                                      title: "Withdrawal",
                                                      text: "Withdrawal request was successfully sent. Please wait a few minutes for account update",
                                                      type:"success",
@@ -3340,7 +3340,7 @@ ul {
                             console.log(lowerKyc);
                           if(lowerKyc=="unverified"){
                 
-                            swal.fire({
+                            swal({
                                                      title: "KYC UNVERIFIED",
                                                      text: "Please verify KYC to complete withdrawal.",
                                                      type:"alert",
